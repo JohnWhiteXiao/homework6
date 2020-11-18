@@ -71,10 +71,9 @@ document.querySelector("#mute").addEventListener("click", function() {
 // Change the volume based on the slider and update the volume information.
 document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this.volume);
-	// ？？？？？？？？？？？？？？？？？？
-	volume.innerHTML = this.volume*100+"%"
 	// volume should be a number between 0 and 10
-	video.volume=this.volume/100
+	video.volume=this.value/100;
+	volume.innerHTML = this.value+"%";
 });
 
 // Utilize the existing grayscale class on the video element
